@@ -37,8 +37,6 @@
 
 #define ARG_SIZE 80
 
-char *degree_c="$Id: degree.c,v 3.7 2021/12/18 13:46:58 jmccue Exp $";
-
 /*
  * show_temp() -- save the temperature
  */
@@ -144,15 +142,9 @@ int show_rev(FILE *fp, char *pname)
 {
 
   fprintf(fp,"%s %s:\n", pname, LIT_REV);
-  fprintf(fp,"\t%s\n", DEGREE_H);
-  fprintf(fp,"\t%s\n", degree_c);
 
 #ifdef J_LIB2_H
-  fprintf(fp,"\t%s\n", J_LIB2_H);
-  fprintf(fp,"\t     %s %s\n", LIT_INFO_02, j2_get_build());
-#endif
-#ifdef J_LIB2M_H
-  fprintf(fp, "\t%s\n", J_LIB2M_H);
+  fprintf(fp,"\t%s %s\n", LIT_INFO_02, j2_get_build());
 #endif
 
 #ifdef OSTYPE

@@ -401,7 +401,7 @@ void process_file(struct s_work *w)
   size_t bsize = (size_t) 0;
 
   /*** process file ***/
-  while (getline(&buf, &bsize, stdin) > (ssize_t) -1)
+  while (j2_getline(&buf, &bsize, stdin) > (ssize_t) -1)
     {
       rec++;
       if (rec > 1)

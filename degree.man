@@ -1,0 +1,68 @@
+.\" 
+.\" Copyright (c) 2009 2010 2010 ... 2022 2023
+.\"     John McCue <jmccue@jmcunx.com>
+.\" 
+.\" Permission to use, copy, modify, and distribute this software for any
+.\" purpose with or without fee is hereby granted, provided that the above
+.\" copyright notice and this permission notice appear in all copies.
+.\" 
+.\" THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+.\" WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+.\" MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+.\" ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+.\" WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+.\" ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+.\" OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+.\" 
+.TH DEGREE 1 "2020/09/23" "JMC" "User Commands"
+.SH NAME
+degree - simple Temperature Conversion Utility
+.SH SYNOPSIS
+degree [OPTIONS] [value...]
+.SH DESCRIPTION
+Convert temperature to various scales.
+If no values specified, read from stdin.
+.TP
+-C
+Optional, convert from Centigrade Scale (default)
+.TP
+-F
+Optional, convert from Fahrenheit Scale
+.TP
+-K
+Optional, convert from Kelvin Scale
+.TP
+-R
+Optional, convert from Rankine Scale
+.TP
+-h
+Show brief help and exit.
+.TP
+-p fmt
+Optional, specify output Format of the Converted Temperatures.
+Also only print the default converted value.
+.nf
+    fmt  prints
+    ---  ----------------------------
+    a    32.00
+    b    32
+    c    32.00x   (x = Degree Unit)
+    d    32x      (x = Degree Unit)
+    e    32.00x   (x = Degree Unit)
+    f    32x      (x = Degree Unit)
+.fi
+.TP
+-q
+Optional, print one converted Temperature.
+.TP
+-V
+Output version information and exit.
+.SH SEE-ALSO
+bc(1),
+dc(1),
+units(1)
+.SH ERROR-CODES
+.nf
+0 success
+1 processing error or help/rev displayed
+.fi

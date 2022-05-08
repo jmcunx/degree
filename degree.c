@@ -450,6 +450,9 @@ int main(int argc, char **argv)
   if (i == optind)
     process_file(&w);
 
+  if (w.prog_name != (char *) NULL)
+    free(w.prog_name);
+
   /*** done ***/
   exit(EXIT_SUCCESS);
 
